@@ -28,8 +28,11 @@ export function Sidebar() {
   return (
     <div className="w-60 min-h-screen bg-sidebar border-r border-sidebar-border flex flex-col glass-card">
       <div className="p-4 border-b border-sidebar-border/50">
-        <h1 className="text-xl font-semibold text-primary flex items-center gap-2">
-          <Shield className="h-5 w-5 text-primary" /> HumanChain
+        <h1 className="text-xl font-semibold flex items-center gap-2">
+          <Shield className="h-5 w-5 text-primary" /> 
+          <span className="bg-gradient-to-r from-primary via-purple-400 to-blue-400 bg-clip-text text-transparent">
+            HumanChain
+          </span>
         </h1>
         <p className="text-xs text-muted-foreground mt-1">AI Safety Dashboard</p>
       </div>

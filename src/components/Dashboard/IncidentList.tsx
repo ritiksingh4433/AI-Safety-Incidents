@@ -21,7 +21,7 @@ export function IncidentList() {
     <div className="h-full overflow-hidden flex flex-col glass-card">
       <div className="p-4 border-b border-border/50 flex items-center justify-between">
         <div className="flex items-center">
-          <h2 className="font-semibold text-primary/90">AI Safety Incidents</h2>
+          <h2 className="font-semibold bg-gradient-to-r from-blue-400 via-primary to-purple-400 bg-clip-text text-transparent">AI Safety Incidents</h2>
           {activeFilters.length > 0 && (
             <div className="ml-3 flex items-center">
               <Filter className="h-3.5 w-3.5 text-muted-foreground" />
