@@ -89,7 +89,7 @@ export function Sidebar() {
       </div>
       
       <div className="p-3 border-t border-sidebar-border/50 mt-auto">
-        <Button className="w-full bg-primary/80 hover:bg-primary" size="sm">
+        <Button className="w-full gradient-button" size="sm">
           <Plus className="h-4 w-4 mr-1.5" /> New Incident
         </Button>
       </div>

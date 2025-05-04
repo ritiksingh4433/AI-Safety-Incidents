@@ -1,11 +1,10 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
+    --background: 222 47% 9%;
     --foreground: 210 40% 98%;
 
     --card: 222 47% 13%;
@@ -53,6 +52,8 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    background: linear-gradient(to bottom, hsl(222, 47%, 9%), hsl(225, 45%, 7%));
+    min-height: 100vh;
   }
 
   /* Custom Scrollbar */
@@ -101,6 +102,11 @@
   
   .card-glow:hover {
     @apply shadow-[0_0_15px_rgba(59,130,246,0.3)];
+  }
+  
+  .gradient-button {
+    @apply relative bg-gradient-to-r from-primary via-purple-400 to-blue-400 text-white font-medium 
+    hover:shadow-lg hover:shadow-primary/20 transition-all duration-300;
   }
 }
 
