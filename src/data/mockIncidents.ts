@@ -1,0 +1,115 @@
+
+import { Incident } from '../types/incident';
+
+export const mockIncidents: Incident[] = [
+  {
+    id: '1',
+    title: 'Unexpected harmful content generation',
+    description: 'AI system generated harmful content when given benign prompts, potentially bypassing safety filters.',
+    timestamp: '2025-04-30T14:23:00Z',
+    severity: 'high',
+    status: 'investigating',
+    aiSystem: 'TextGenius LLM',
+    category: 'Content Safety',
+    impact: 'Potential exposure of users to harmful content',
+    reportedBy: 'Content Safety Team',
+    tags: ['content generation', 'safety filters', 'bypass']
+  },
+  {
+    id: '2',
+    title: 'Voice Assistant privacy breach',
+    description: 'Voice assistant activated without wake word and recorded private conversation.',
+    timestamp: '2025-05-01T09:15:00Z',
+    severity: 'critical',
+    status: 'open',
+    aiSystem: 'HomeHelper Assistant',
+    category: 'Privacy',
+    impact: 'Unauthorized data collection affecting 1,200 users',
+    reportedBy: 'Privacy Team',
+    assignedTo: 'Sarah Chen',
+    tags: ['voice assistant', 'privacy', 'unauthorized recording']
+  },
+  {
+    id: '3',
+    title: 'Bias in hiring recommendations',
+    description: 'AI recruiting tool showing gender bias in technical role recommendations.',
+    timestamp: '2025-04-28T11:45:00Z',
+    severity: 'high',
+    status: 'investigating',
+    aiSystem: 'TalentMatch AI',
+    category: 'Fairness & Bias',
+    impact: 'Potential discrimination in hiring process',
+    reportedBy: 'HR Department',
+    assignedTo: 'Michael Johnson',
+    tags: ['bias', 'hiring', 'gender']
+  },
+  {
+    id: '4',
+    title: 'AI recommendation system downtime',
+    description: 'Product recommendation engine offline for 15 minutes, affecting e-commerce platform.',
+    timestamp: '2025-05-02T16:30:00Z',
+    severity: 'medium',
+    status: 'resolved',
+    aiSystem: 'ShopSmart AI',
+    category: 'System Reliability',
+    impact: 'Temporary loss of personalized shopping experience',
+    reportedBy: 'System Monitoring',
+    tags: ['downtime', 'e-commerce', 'recommendations']
+  },
+  {
+    id: '5',
+    title: 'Medical diagnosis error pattern',
+    description: 'Pattern of false negatives detected in AI radiology assistant for specific condition.',
+    timestamp: '2025-04-25T08:45:00Z',
+    severity: 'critical',
+    status: 'investigating',
+    aiSystem: 'MedVision AI',
+    category: 'Healthcare',
+    impact: 'Potential missed diagnoses requiring clinical review',
+    reportedBy: 'Quality Assurance',
+    assignedTo: 'Dr. Amanda Lee',
+    tags: ['healthcare', 'diagnosis', 'false negatives']
+  },
+  {
+    id: '6',
+    title: 'Customer service chatbot providing inaccurate information',
+    description: 'AI chatbot giving outdated policy information to customers.',
+    timestamp: '2025-05-03T10:20:00Z',
+    severity: 'low',
+    status: 'resolved',
+    aiSystem: 'SupportBot',
+    category: 'Information Accuracy',
+    impact: 'Customer confusion and support team overhead',
+    reportedBy: 'Customer Service',
+    actions: ['Updated knowledge base', 'Retrained model'],
+    tags: ['chatbot', 'misinformation']
+  },
+  {
+    id: '7',
+    title: 'Unauthorized API access attempt',
+    description: 'Multiple attempts to access AI system API with stolen credentials.',
+    timestamp: '2025-05-01T23:15:00Z',
+    severity: 'high',
+    status: 'closed',
+    aiSystem: 'Enterprise AI Platform',
+    category: 'Security',
+    impact: 'No data breach, attempts blocked by security measures',
+    reportedBy: 'Security Operations',
+    actions: ['Blocked IP addresses', 'Reset affected credentials', 'Added additional authentication layer'],
+    tags: ['security', 'API', 'unauthorized access']
+  },
+  {
+    id: '8',
+    title: 'Unexpected model behavior after update',
+    description: 'New model version showing unexpected responses for certain query types.',
+    timestamp: '2025-05-02T14:10:00Z',
+    severity: 'medium',
+    status: 'investigating',
+    aiSystem: 'QueryMaster NLP',
+    category: 'Model Performance',
+    impact: 'Degraded user experience for specialized queries',
+    reportedBy: 'QA Testing Team',
+    assignedTo: 'Alex Wong',
+    tags: ['model update', 'regression', 'NLP']
+  }
+];
