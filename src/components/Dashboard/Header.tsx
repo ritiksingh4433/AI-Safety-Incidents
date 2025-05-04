@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { Search, Bell, Menu } from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Search, Menu } from 'lucide-react';
 import { useIncidents } from '@/context/IncidentContext';
 import { Input } from '@/components/ui/input';
 import {
@@ -13,6 +12,8 @@ import {
 } from '@/components/ui/select';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from '../ui/button';
+import { Notifications } from './Notifications';
+import { UserAccount } from './UserAccount';
 
 export function Header() {
   const { 
@@ -80,15 +81,8 @@ export function Header() {
             </Select>
           )}
           
-          <Button variant="ghost" size="icon" className="relative hover:bg-secondary/50">
-            <Bell className="h-5 w-5" />
-            <span className="absolute h-2 w-2 bg-primary rounded-full top-2 right-2 animate-pulse"></span>
-          </Button>
-          
-          <Avatar className="h-8 w-8 border-2 border-primary/30">
-            <AvatarImage src="" alt="User" />
-            <AvatarFallback className="text-xs bg-primary/20 text-primary">AD</AvatarFallback>
-          </Avatar>
+          <Notifications />
+          <UserAccount />
         </div>
       </div>
     </header>
