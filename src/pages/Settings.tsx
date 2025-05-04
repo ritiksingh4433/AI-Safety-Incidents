@@ -44,11 +44,11 @@ function SettingsContent() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" defaultValue="Alex Doe" />
+                  <Input id="name" defaultValue="Ritik Singh" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" defaultValue="alex.doe@example.com" type="email" />
+                  <Input id="email" defaultValue="singhritik4433@gmail.com" type="email" />
                 </div>
               </div>
               
