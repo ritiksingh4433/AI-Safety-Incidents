@@ -76,11 +76,11 @@
 
 @layer components {
   .glass-card {
-    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-md;
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-lg;
   }
   
   .pulse-dot {
-    @apply w-2 h-2 rounded-full inline-block mr-2;
+    @apply w-2 h-2 rounded-full inline-block mr-2 animate-pulse;
   }
   
   .status-badge {
@@ -89,5 +89,37 @@
 
   .fade-in {
     @apply animate-fade-in;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-[1.02] hover:shadow-lg;
+  }
+  
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .card-glow:hover {
+    @apply shadow-[0_0_15px_rgba(59,130,246,0.3)];
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse-slow 3s infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
   }
 }

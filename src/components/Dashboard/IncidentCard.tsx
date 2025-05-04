@@ -2,6 +2,7 @@
 import { Incident } from '@/types/incident';
 import { formattedDate } from '@/lib/utils';
 import { useIncidents } from '@/context/IncidentContext';
+import { Badge } from '@/components/ui/badge';
 
 interface IncidentCardProps {
   incident: Incident;
@@ -24,13 +25,13 @@ export function IncidentCard({ incident }: IncidentCardProps) {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'open':
-        return <span className="status-badge bg-primary/20 text-primary">Open</span>;
+        return <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30">Open</Badge>;
       case 'investigating':
-        return <span className="status-badge bg-ai-medium/20 text-ai-medium">Investigating</span>;
+        return <Badge variant="outline" className="bg-ai-medium/10 text-ai-medium border-ai-medium/30">Investigating</Badge>;
       case 'resolved':
-        return <span className="status-badge bg-ai-low/20 text-ai-low">Resolved</span>;
+        return <Badge variant="outline" className="bg-ai-low/10 text-ai-low border-ai-low/30">Resolved</Badge>;
       case 'closed':
-        return <span className="status-badge bg-muted/30 text-muted-foreground">Closed</span>;
+        return <Badge variant="outline" className="bg-muted/20 text-muted-foreground border-muted/30">Closed</Badge>;
       default:
         return null;
     }
@@ -42,14 +43,14 @@ export function IncidentCard({ incident }: IncidentCardProps) {
 
   return (
     <div 
-      className={`p-4 border rounded-lg transition-all cursor-pointer ${
+      className={`p-4 rounded-lg transition-all cursor-pointer hover-scale card-glow smooth-transition ${
         isSelected 
-          ? 'glass-card border-primary/50 shadow-md shadow-primary/5' 
-          : 'hover:bg-card/70 border-transparent hover:border-border/50'
+          ? 'glass-card border-primary/50 shadow-md shadow-primary/10' 
+          : 'bg-card/70 border border-border/30 hover:border-border/60'
       }`}
       onClick={handleClick}
     >
-      <div className="flex items-start justify-between mb-2">
+      <div className="flex items-start justify-between mb-3">
         <h3 className="font-medium text-sm line-clamp-1">{incident.title}</h3>
         <div className={`pulse-dot ${getSeverityColor(incident.severity)}`}></div>
       </div>
@@ -57,13 +58,13 @@ export function IncidentCard({ incident }: IncidentCardProps) {
       <p className="text-xs text-muted-foreground line-clamp-2 mb-3">{incident.description}</p>
       
       <div className="flex items-center justify-between">
-        <div className="text-xs text-muted-foreground">{formattedDate(incident.timestamp)}</div>
+        <div className="text-xs text-muted-foreground/80">{formattedDate(incident.timestamp)}</div>
         <div>{getStatusBadge(incident.status)}</div>
       </div>
       
-      <div className="mt-3 flex items-center gap-2">
-        <div className="text-xs bg-secondary/50 px-2 py-0.5 rounded-md">{incident.aiSystem}</div>
-        <div className="text-xs bg-secondary/50 px-2 py-0.5 rounded-md">{incident.category}</div>
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <Badge variant="secondary" className="bg-secondary/30 hover:bg-secondary/40">{incident.aiSystem}</Badge>
+        <Badge variant="secondary" className="bg-secondary/30 hover:bg-secondary/40">{incident.category}</Badge>
       </div>
     </div>
   );
