@@ -9,7 +9,7 @@ export const mockIncidents: Incident[] = [
     timestamp: '2025-04-30T14:23:00Z',
     severity: 'high',
     status: 'investigating',
-    aiSystem: 'TextGenius LLM',
+    aiSystem: 'TextGenius',
     category: 'Content Safety',
     impact: 'Potential exposure of users to harmful content',
     reportedBy: 'Content Safety Team',

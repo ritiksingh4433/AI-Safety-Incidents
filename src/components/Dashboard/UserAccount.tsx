@@ -43,14 +43,14 @@ export function UserAccount() {
       <DropdownMenuTrigger asChild>
         <Avatar className="h-8 w-8 border-2 border-primary/30 cursor-pointer hover:border-primary/60 transition-colors">
           <AvatarImage src="" alt="User" />
-          <AvatarFallback className="text-xs bg-primary/20 text-primary">AD</AvatarFallback>
+          <AvatarFallback className="text-xs bg-primary/20 text-primary">RS</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 bg-card border-border/50" align="end">
         <DropdownMenuLabel>
           <div className="flex flex-col">
-            <span>Alex Doe</span>
-            <span className="text-xs font-normal text-muted-foreground">alex.doe@example.com</span>
+            <span>Ritik Singh</span>
+            <span className="text-xs font-normal text-muted-foreground">singhritik4433@gmail.com</span>
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
